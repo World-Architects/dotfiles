@@ -17,7 +17,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Set highlight color to green
-defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.568600'
+#defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.568600'
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -42,7 +42,8 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 systemsetup -setrestartfreeze on
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
